@@ -3,11 +3,14 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
-const connectToMongo = require('./db'); // Ensure this file connects to your MongoDB
-const authRoutes = require('./routes/Auth');
+const connectToMongo = require('./db'); // Import MongoDB connection
+// Import routes
 const bookingRoutes = require('./routes/Booking');
-const providerRoutes = require('./routes/Provider'); 
-const addServiceRoute = require('./routes/Addservice'); // Ensure the name matches your file
+const providerRoutes = require('./routes/Provider');
+const addServiceRoute = require('./routes/Addservice');
+const addAuthUserRoute = require('./routes/Authuser.js');
+
+
 require('dotenv').config();
 
 const app = express();
@@ -22,17 +25,21 @@ if (!fs.existsSync(uploadDir)) {
 
 // Middleware
 app.use(express.json());
-app.use(cors());
-app.use('/uploads', express.static(uploadDir)); 
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+}));
+app.use('/uploads', express.static(uploadDir));
 
 // Connect to MongoDB
-connectToMongo();
+connectToMongo(); // Ensure MongoDB is connected before starting the server
 
 // API Routes
-app.use('/api/Auth', authRoutes);
 app.use('/api/Booking', bookingRoutes);
 app.use('/api/Provider', providerRoutes);
-app.use('/api/Addservice', addServiceRoute); // Correct usage of addServiceRoute
+app.use('/api/Addservice', addServiceRoute);
+app.use('/api/Authuser', addAuthUserRoute);
 
 // Start the server
 app.listen(PORT, () => {

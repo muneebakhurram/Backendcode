@@ -5,7 +5,7 @@ const Booking = require('../models/booking'); // Ensure the path is correct to y
 const path = require('path');
 const router = express.Router();
 
-// Set up multer storage
+// Set up multer storages
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, path.join(__dirname, '../uploads')); // Ensure the uploads directory exists
