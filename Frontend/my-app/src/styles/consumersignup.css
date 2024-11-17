@@ -1,0 +1,71 @@
+.vh-100 {
+    height: 100vh;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 1.2rem;
+  }
+  
+  .success-message {
+    color: green;
+    font-size: 1.2rem;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .form-container {
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+  }
+  
+  .form-outline {
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    width: 100%; /* Match the button width to the input fields */
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-3 {
+    margin-top: 1rem;
+  }
+  
+  .register-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .form-outline.mb-4 {
+    margin-bottom: 0rem !important; /* Reduced from 1.5rem to 1rem to move fields closer */
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 20px;
+    }
+  
+    .form-outline input {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  
+    .btn-primary {
+      font-size: 1rem; /* Adjust button font size for smaller screens */
+    }
+  }

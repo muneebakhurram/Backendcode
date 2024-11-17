@@ -1,0 +1,117 @@
+.footer {
+    background-color: #232a32;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.logo-section h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.logo-section p {
+    font-size: 14px;
+    color: #999;
+}
+
+.maintenance-text {
+    font-size: 16px; 
+    color: #999; 
+    margin: 0; 
+}
+
+.services-menu-section {
+    display: flex;
+    gap: 40px; 
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 10px; 
+    transition: color 0.3s; 
+}
+
+.footer-section ul li:hover {
+    color: #007bff; 
+}
+
+.follow-section p {
+    margin: 10px 0; 
+    transition: color 0.3s; 
+}
+
+.follow-section p:hover {
+    color: #007bff; 
+}
+
+.footer-section input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.footer-section button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section button:hover {
+    background-color: #0056b3;
+}
+
+.footer-line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.footer-line img {
+    width: 90%;
+    height: auto;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: #bbb;
+}
+
+.highlight {
+    color: #007bff;
+}

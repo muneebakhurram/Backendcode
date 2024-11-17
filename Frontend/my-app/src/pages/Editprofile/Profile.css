@@ -1,0 +1,110 @@
+
+  
+ 
+  .edit-profile-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-side {
+    flex: 1;
+    margin-right: 20px;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+input[type="file"] {
+  display: block; 
+  margin-top: 5px; 
+  border: 1px solid #000000;
+  border-radius: 5px; 
+  padding: 10px; 
+  width: calc(100% - 20px); 
+}
+
+
+
+.pic {
+    width: 80%; 
+    height: auto;
+    border-radius: 10px;
+}
+
+.form-side {
+    flex: 2;
+}
+
+
+
+  h2 {
+    font-weight: bold;
+    margin-bottom: 20px; 
+}
+
+h3 {
+    font-weight: bold;
+    margin-top: 0; 
+}
+ 
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    height: 100px; 
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .success {
+    color: green;
+    margin-bottom: 15px;
+  }
+  
+  .save-button {
+   
+        width: 50%; 
+        padding: 12px; 
+        background-color: #007bff;
+        color: #fff; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease;
+        margin: 0 auto;
+        display: block; 
+      
+  }
+  
+  .save-button:hover {
+    background-color: #007bff; 
+  }
+  select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
