@@ -30,10 +30,9 @@ const upload = multer({
     }
 });
 
-// Route to create a booking with file upload
 router.post('/create', upload.single('image'), async (req, res) => {
     const { serviceName, problemDescription, estimatedCharges, date, time, serviceLevel } = req.body;
-    const image = req.file ? req.file.path : null;
+    const image = req.file ? `uploads/${req.file.filename}` : null; // Store the relative path
 
     try {
         const newBooking = new Booking({
@@ -50,6 +49,17 @@ router.post('/create', upload.single('image'), async (req, res) => {
     } catch (error) {
         console.error('Error creating booking:', error.message);
         res.status(500).json({ success: false, message: 'Failed to create booking.' });
+    }
+});
+
+// Route for fetching all bookings
+router.get('/details', async (req, res) => {
+    try {
+        const bookings = await Booking.find(); // Fetch all bookings
+        res.json(bookings);
+    } catch (error) {
+        console.error('Error fetching booking details:', error.message);
+        res.status(500).json({ message: 'Failed to fetch booking details' });
     }
 });
 
